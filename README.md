@@ -1,12 +1,13 @@
 # PAYKOOS - Solusi keuangan uang kos anda
 Please use for learning materials or developed. But not for sale. When selling a variety of ways it will be penalized.
 
-##Creator
+## Creator
 Paykoos was created by and is maintained by **[F. Rohim](https://about.me/oimtrust/)**, Owner of [Otrust Tutorial](https://otrust.blogspot.co.id/).
-*https://www.facebook.com/oimtrust
-*https://www.facebook.com/otrusttutorial/
 
-##Copyright and License
+* https://www.facebook.com/oimtrust
+* https://www.facebook.com/otrusttutorial/
+
+## Copyright and License
 Copyright 2016-2017 oimtrust. Code released under the [MIT](https://github.com/oimtrust/paykoos/blob/master/LICENSE) license.
 
 </hr>
