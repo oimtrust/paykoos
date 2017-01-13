@@ -19,6 +19,28 @@
 	    	return $stmt;
 	    }
 
+	    public function savePayment($iroom, $irenter, $date_t, $tmonth, $pay, $total)
+	    {
+	    	try {
+	    		$stmt = $this->conn->prepare(
+	    				"INSERT INTO tbl_payment(id_room,id_renter,date_trans,total_month,payment,total)
+	    				VALUES(:iroom,:irenter,:date_t,:tmonth,:pay,:total)"
+	    			);
+	    		$stmt->bindParam(":iroom", $iroom);
+	    		$stmt->bindParam(":irenter", $irenter);
+	    		$stmt->bindParam(":date_t", $date_t);
+	    		$stmt->bindParam(":tmonth", $tmonth);
+	    		$stmt->bindParam(":pay", $pay);
+	    		$stmt->bindParam(":total", $total);
+	    		$stmt->execute();
+
+	    		return $stmt;
+	    	} catch (PDOException $e) {
+	    		echo $e->getMessage();
+	    	}
+	    }
+
+
 	    public function saveRenter($fname, $gender, $father, $mother, $phone, $address, $irole, $iowner, $iroom)
 	    {
 	    	try {

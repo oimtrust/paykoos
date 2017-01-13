@@ -30,6 +30,41 @@ WHERE
 		//$iclass_price .= $row['price'];
 	}
 
+	//for saving data payment
+	if (isset($_POST['btn-save-addPayment'])) {
+		$iroom 		= strip_tags($_POST['id_room']);
+		$irenter 	= strip_tags($_POST['id_renter']);
+		$date_t		= strip_tags($_POST['date_trans']);
+		$tmonth		= strip_tags($_POST['total_month']);
+		$pay 		= strip_tags($_POST['payment']);
+		$total 		= strip_tags($_POST['total']);
+
+		if ($iroom == "") {
+			$error[]	= "Provide Room Name";
+		}
+		elseif ($irenter == "") {
+			$error[]	= "Provide Renter Name";
+		}
+		elseif ($date_t == "") {
+			$error[]	= "Provide Date";
+		}
+		elseif ($tmonth == "") {
+			$error[]	= "Provide Total Month";
+		}
+		elseif ($pay == "") {
+			$error[]	= "Provide Payment";
+		}
+		else {
+			try {
+				if ($auth_owner->savePayment($iroom,$irenter,$date_t,$tmonth,$pay,$total)) {
+					$auth_owner->redirect('owner-payment-add.php?saved');
+				}
+			} catch (PDOException $e) {
+				echo $e->getMessage();
+			}
+		}
+	}
+
 		
 	//Menampilkan view
 	include 'app/view/header.php';

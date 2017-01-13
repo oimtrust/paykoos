@@ -22,8 +22,11 @@
         
         <div class="row">
         	<div class="col-lg-12">
-	        	<div class="col-md-2">
-	            	<button type="submit" class="btn btn-info" name="btn-addrenter" onclick="location.href='owner-payment-add.php'">Add Payment</button>
+	        	<div class="col-md-4">
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-info" name="btn-addrenter" onclick="location.href='owner-payment-add.php'">Add Payment</button>
+                        <button type="submit" class="btn btn-warning" name="btn-report" onclick="location.href='#'">Print Report</button>
+                    </div>	            	
 	            </div>
 	        </div>
         </div>
@@ -49,8 +52,7 @@
         			<tbody>
         				<?php 
                             $i = 1; ?>
-                            <tr class="<?php if ($i % 2 == 0) { echo "odd"; } else { echo "even"; } ?>">
-                                <td><?php echo $i; ?></td>
+                            <tr>
                                 <?php 
                                     for ($j=0; $j < count($result); $j++) { 
                                         echo "<td>".$i++."</td>" ;
@@ -59,9 +61,6 @@
                                     $i++;
                                  ?>
                             </tr>
-                            <?php
-                            $i++;
-                         ?>
         			</tbody>
         		</table>
         	</div>

@@ -34,6 +34,11 @@
 	$sql 	= "SELECT
 						pay.id_payment,
 						renter.fullname,
+						renter.gender,
+						renter.mother,
+						renter.phone,
+						renter.father,
+						renter.address,
 						room.room_name,
 						pay.date_trans,
 						pay.total_month,
@@ -57,7 +62,7 @@
     else {
     	while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     		// store each row in result variable
-    		$result[] = $row['fullname']." ". $row['gender']." ". $row['father']." ". $row['mother']." ". $row['phone']." ". $row['address'];
+    		$result[] = "<td>".$row['fullname']."</td><td>". $row['room_name']."</td><td>". $row['date_trans']."</td><td>". $row['total_month']."</td><td>". $row['payment']."</td><td>". $row['total'];
     	}
     }
 
@@ -65,6 +70,11 @@
     $count_query = "SELECT
 						pay.id_payment,
 						renter.fullname,
+						renter.gender,
+						renter.mother,
+						renter.phone,
+						renter.father,
+						renter.address,
 						room.room_name,
 						pay.date_trans,
 						pay.total_month,

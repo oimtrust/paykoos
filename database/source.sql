@@ -174,3 +174,24 @@ WHERE
 SELECT id_room, id_owner, room_name, id_class, status, photo FROM tbl_rooms ORDER BY id_room DESC;
 
 SELECT cls.price FROM tbl_class AS cls WHERE id_class
+
+#for payment table
+SELECT
+						pay.id_payment,
+						renter.fullname,
+						renter.gender,
+						renter.mother,
+						renter.phone,
+						renter.father,
+						renter.address,
+						room.room_name,
+						pay.date_trans,
+						pay.total_month,
+						pay.payment,
+						pay.total
+					FROM
+						tbl_payment AS pay
+						LEFT JOIN tbl_renter AS renter ON pay.id_renter = renter.id_renter
+						LEFT JOIN tbl_rooms AS room ON pay.id_room = room.id_room
+						LEFT JOIN tbl_owner AS owner ON room.id_owner = owner.id_owner
+					WHERE owner.id_owner='1'
