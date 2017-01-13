@@ -1,4 +1,4 @@
-# PAYKOOS - Solusi keuangan uang kos anda
+# PAYKOOS - Solusi keuangan kos anda
 Please use for learning materials or developed. But not for sale. When selling a variety of ways it will be penalized.
 
 ## Creator
