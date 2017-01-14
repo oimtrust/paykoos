@@ -27,7 +27,8 @@
 						LEFT JOIN tbl_owner AS owner ON room.id_owner = owner.id_owner
 					WHERE owner.id_owner='$ownerRow[id_owner]'");
 	$stmtReport->execute();
-	
+
+	//Creating and converted of report
 	$pdf 	= new PDF('L','mm',array(297,210));
 	$pdf->AddPage();
 	foreach ($stmtReport as $row) {
