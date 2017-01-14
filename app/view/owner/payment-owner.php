@@ -25,7 +25,7 @@
 	        	<div class="col-md-4">
                     <div class="btn-group">
                         <button type="submit" class="btn btn-info" name="btn-addrenter" onclick="location.href='owner-payment-add.php'">Add Payment</button>
-                        <button type="submit" class="btn btn-warning" name="btn-report" onclick="location.href='#'">Print Report</button>
+                        <button type="submit" class="btn btn-warning" name="btn-report" onclick="location.href='owner-payment-report.php'">Print Report</button>
                     </div>	            	
 	            </div>
 	        </div>
