@@ -34,28 +34,4 @@
 		echo json_encode($returnData);
 	}
 
-	/**
-	* Old data
-	*/
-	/**
-	// if ($_POST['id']) {
-	// 	$iclass = $_POST['id'];
-	// 	$stmt = $auth_owner->runQuery("SELECT * FROM tbl_rooms WHERE id_room=:id");
-	// 	$stmt->execute(array(':id' => $iclass));
-	 	?>
-	 	<!--
-	 	<option selected="selected">--Select Room--</option>
-	 	-->
-	 	<?php
-	// 	while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-	 		?>
-			<!--
-	 		<option value="<?php echo $row['id_room']; ?>"><?php echo $row['room_name']; ?></option>
-			-->
-	 		<?php
-	// 	}
-	// }
-
-	*/
-
  ?>
