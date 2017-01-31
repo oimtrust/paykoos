@@ -55,15 +55,9 @@
 				$stmt = $auth_owner->runQuery("SELECT class_name FROM tbl_class WHERE class_name=:cname");
 				$stmt->execute(array(':cname'=>$cname));
 				$row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-				if ($row['class_name'] == $cname) {
-					$error[]	= "Sorry Class Name already taken!";
-				}
-				else{
 					if ($auth_owner->saveClass($owner,$cname,$price)) {
 						$auth_owner->redirect('owner-house.php?saved');
 					}
-				}
 			} catch (PDOException $e) {
 				echo $e->getMessage();
 			}
