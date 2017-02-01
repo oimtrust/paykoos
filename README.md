@@ -7,6 +7,12 @@ Paykoos was created by and is maintained by **[F. Rohim](https://about.me/oimtru
 * https://www.facebook.com/oimtrust
 * https://www.facebook.com/otrusttutorial/
 
+## How to use?
+If you want to log in, enter your username and password:
+``` Username : oimtrust
+    Password : oimtrust```
+Or you can register
+
 ## Copyright and License
 Copyright 2016-2017 oimtrust. Code released under the [MIT](https://github.com/oimtrust/paykoos/blob/master/LICENSE) license.
 
